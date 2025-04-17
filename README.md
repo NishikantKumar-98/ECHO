@@ -113,7 +113,7 @@ Want to contribute? Follow these steps:
 ## Submission Details for Code Forge Hackathon
 
 - **GitHub Repository**: [Energy Shield](https://github.com/Nishikantkumar-98/AI-driven-Energy-Shield)
-- **Short Video**: [View Project](https://github.com/NishikantKumar-98/AI-driven-Energy-Shield/blob/25f5f3787236cd5138aa61ed73573e615edd8c9f/Echo)
+- **Short Video**: [View Project](https://github.com/NishikantKumar-98/ECHO/blob/45a59db21d019ec1058f6f166efe70ecc33b6271/Echo%20video.mp4)
 
 ---
 
