@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback | Energy Shield</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="feedback.css">
+    <link rel="icon" href="eslogo.jpg" type="image/x-icon">
+</head>
+<body>
+    <div class="particles" id="particles-js"></div>
+    
+    <div class="feedback-wrapper">
+        <!-- Sidebar Navigation -->
+        <aside class="feedback-sidebar">
+            <div class="sidebar-header">
+                <img src="eslogo.jpg" alt="Energy Shield Logo" class="sidebar-logo">
+                <h2>Energy Shield</h2>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <ul>
+                    <li>
+                        <a href="#cybersecurity" class="nav-item active" data-section="cybersecurity">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>Cybersecurity</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#threat-detection" class="nav-item" data-section="threat-detection">
+                            <i class="fas fa-bug"></i>
+                            <span>Threat Detection</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#load-balancing" class="nav-item" data-section="load-balancing">
+                            <i class="fas fa-balance-scale"></i>
+                            <span>Load Balancing</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#general-feedback" class="nav-item" data-section="general-feedback">
+                            <i class="fas fa-comment-alt"></i>
+                            <span>General Feedback</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            
+            <div class="sidebar-footer">
+                <a href="dashboard.html" class="back-btn">
+                    <i class="fas fa-arrow-left"></i>
+                    <span>Back to Dashboard</span>
+                </a>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="feedback-main">
+            <header class="feedback-header">
+                <h1><i class="fas fa-comment-dots"></i> Feedback Dashboard</h1>
+                <div class="user-controls">
+                    <div class="user-profile">
+                        <img src="https://via.placeholder.com/40" alt="User Avatar" class="user-avatar">
+                        <span class="username">admin@energyshield.com</span>
+                    </div>
+                    <button class="logout-btn">
+                        <i class="fas fa-sign-out-alt"></i>
+                        <span>Logout</span>
+                    </button>
+                </div>
+            </header>
+            
+            <div class="feedback-content">
+                <!-- Cybersecurity Feedback Section -->
+                <section id="cybersecurity" class="feedback-section active">
+                    <div class="section-header">
+                        <h2><i class="fas fa-shield-alt"></i> Cybersecurity Feedback</h2>
+                        <div class="feedback-stats">
+                            <div class="stat-item">
+                                <span class="stat-value">84%</span>
+                                <span class="stat-label">Positive Ratings</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-value">23</span>
+                                <span class="stat-label">Responses</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <form class="feedback-form">
+                        <div class="form-group">
+                            <label for="cybersecurity-exp">
+                                <i class="fas fa-lock"></i> How secure do you feel when using our platform?
+                            </label>
+                            <div class="rating-options">
+                                <div class="rating-option">
+                                    <input type="radio" id="cyber-very-secure" name="cybersecurity-exp" value="very-secure">
+                                    <label for="cyber-very-secure" class="rating-label">
+                                        <i class="fas fa-smile"></i>
+                                        <span>Very Secure</span>
+                                    </label>
+                                </div>
+                                <div class="rating-option">
+                                    <input type="radio" id="cyber-secure" name="cybersecurity-exp" value="secure">
+                                    <label for="cyber-secure" class="rating-label">
+                                        <i class="fas fa-smile-beam"></i>
+                                        <span>Secure</span>
+                                    </label>
+                                </div>
+                                <div class="rating-option">
+                                    <input type="radio" id="cyber-neutral" name="cybersecurity-exp" value="neutral">
+                                    <label for="cyber-neutral" class="rating-label">
+                                        <i class="fas fa-meh"></i>
+                                        <span>Neutral</span>
+                                    </label>
+                                </div>
+                                <div class="rating-option">
+                                    <input type="radio" id="cyber-insecure" name="cybersecurity-exp" value="insecure">
+                                    <label for="cyber-insecure" class="rating-label">
+                                        <i class="fas fa-frown"></i>
+                                        <span>Insecure</span>
+                                    </label>
+                                </div>
+                                <div class="rating-option">
+                                    <input type="radio" id="cyber-very-insecure" name="cybersecurity-exp" value="very-insecure">
+                                    <label for="cyber-very-insecure" class="rating-label">
+                                        <i class="fas fa-angry"></i>
+                                        <span>Very Insecure</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="cybersecurity-issues">
+                                <i class="fas fa-exclamation-triangle"></i> Did you encounter any security issues?
+                            </label>
+                            <textarea id="cybersecurity-issues" placeholder="Describe any security issues encountered"></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="cybersecurity-improvements">
+                                <i class="fas fa-lightbulb"></i> Suggestions for improving cybersecurity
+                            </label>
+                            <textarea id="cybersecurity-improvements" placeholder="Provide your suggestions here"></textarea>
+                        </div>
+                        
+                        <div class="form-actions">
+                            <button type="button" class="btn btn-secondary">Cancel</button>
+                            <button type="submit" class="btn btn-primary save-btn">
+                                <span class="btn-text">Submit Feedback</span>
+                                <div class="loader"></div>
+                            </button>
+                        </div>
+                    </form>
+                </section>
+
+                <!-- Threat Detection Feedback Section -->
+                <section id="threat-detection" class="feedback-section">
+                    <!-- Similar structure as cybersecurity section -->
+                </section>
+
+                <!-- Load Balancing Feedback Section -->
+                <section id="load-balancing" class="feedback-section">
+                    <!-- Similar structure as cybersecurity section -->
+                </section>
+
+                <!-- General Feedback Section -->
+                <section id="general-feedback" class="feedback-section">
+                    <!-- Similar structure as cybersecurity section -->
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="feedback.js"></script>
+</body>
+</html>

@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings | Energy Shield</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="setting.css">
+    <link rel="icon" href="eslogo.jpg" type="image/x-icon">
+</head>
+<body>
+    <div class="settings-wrapper">
+        <!-- Sidebar Navigation -->
+        <aside class="settings-sidebar">
+            <div class="sidebar-header">
+                <img src="eslogo.jpg" alt="Energy Shield Logo" class="sidebar-logo">
+                <h2>Energy Shield</h2>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <ul>
+                    <li>
+                        <a href="#profile" class="nav-item active" data-section="profile">
+                            <i class="fas fa-user"></i>
+                            <span>Profile</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#notifications" class="nav-item" data-section="notifications">
+                            <i class="fas fa-bell"></i>
+                            <span>Notifications</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#privacy" class="nav-item" data-section="privacy">
+                            <i class="fas fa-lock"></i>
+                            <span>Privacy</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#security" class="nav-item" data-section="security">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>Security</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#preferences" class="nav-item" data-section="preferences">
+                            <i class="fas fa-cog"></i>
+                            <span>Preferences</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#account" class="nav-item" data-section="account">
+                            <i class="fas fa-user-cog"></i>
+                            <span>Account</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            
+            <div class="sidebar-footer">
+                <a href="welcome.html" class="logout-btn">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span>Logout</span>
+                </a>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="settings-main">
+            <header class="settings-header">
+                <h1>Account Settings</h1>
+                <div class="user-profile">
+                    <img src="https://via.placeholder.com/40" alt="User Avatar" class="user-avatar">
+                    <span class="username">admin@energyshield.com</span>
+                </div>
+            </header>
+            
+            <div class="settings-content">
+                <!-- Profile Section -->
+                <section id="profile" class="settings-section active">
+                    <h2><i class="fas fa-user"></i> Profile Information</h2>
+                    <form class="settings-form">
+                        <div class="form-group">
+                            <label for="profile-username">Username</label>
+                            <input type="text" id="profile-username" value="EnergyAdmin">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="profile-email">Email Address</label>
+                            <input type="email" id="profile-email" value="admin@energyshield.com">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="profile-company">Company</label>
+                            <input type="text" id="profile-company" value="Energy Shield Inc.">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="profile-role">Role</label>
+                            <select id="profile-role">
+                                <option>Administrator</option>
+                                <option>Operator</option>
+                                <option>Viewer</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-actions">
+                            <button type="button" class="btn btn-secondary">Cancel</button>
+                            <button type="submit" class="btn btn-primary save-btn">Save Changes</button>
+                        </div>
+                    </form>
+                </section>
+                
+                <!-- Notifications Section -->
+                <section id="notifications" class="settings-section">
+                    <h2><i class="fas fa-bell"></i> Notification Preferences</h2>
+                    <form class="settings-form">
+                        <div class="form-group toggle-group">
+                            <label>Email Notifications</label>
+                            <label class="toggle-switch">
+                                <input type="checkbox" checked>
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+                        
+                        <div class="form-group toggle-group">
+                            <label>Push Notifications</label>
+                            <label class="toggle-switch">
+                                <input type="checkbox">
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+                        
+                        <div class="form-group toggle-group">
+                            <label>Critical Alerts</label>
+                            <label class="toggle-switch">
+                                <input type="checkbox" checked>
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Notification Frequency</label>
+                            <select>
+                                <option>Immediately</option>
+                                <option>Daily Summary</option>
+                                <option>Weekly Summary</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-actions">
+                            <button type="button" class="btn btn-secondary">Reset</button>
+                            <button type="submit" class="btn btn-primary save-btn">Save Preferences</button>
+                        </div>
+                    </form>
+                </section>
+                
+                <!-- Privacy Section -->
+                <section id="privacy" class="settings-section">
+                    <h2><i class="fas fa-lock"></i> Privacy Settings</h2>
+                    <form class="settings-form">
+                        <div class="form-group toggle-group">
+                            <label>Data Collection for Analytics</label>
+                            <label class="toggle-switch">
+                                <input type="checkbox" checked>
+                                <span class="slider"></span>
+                            </label>
+                            <p class="form-hint">Help us improve by sharing anonymous usage data</p>
+                        </div>
+                        
+                        <div class="form-group toggle-group">
+                            <label>Show Activity Status</label>
+                            <label class="toggle-switch">
+                                <input type="checkbox">
+                                <span class="slider"></span>
+                            </label>
+                            <p class="form-hint">Allow others to see when you're active</p>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Data Retention Period</label>
+                            <select>
+                                <option>30 days</option>
+                                <option>90 days</option>
+                                <option>1 year</option>
+                                <option>Indefinitely</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-primary save-btn">Update Privacy Settings</button>
+                        </div>
+                    </form>
+                </section>
+                
+                <!-- Security Section -->
+                <section id="security" class="settings-section">
+                    <h2><i class="fas fa-shield-alt"></i> Security Settings</h2>
+                    <form class="settings-form">
+                        <div class="form-group">
+                            <label>Current Password</label>
+                            <input type="password" placeholder="Enter current password">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>New Password</label>
+                            <input type="password" placeholder="Enter new password">
+                            <div class="password-strength">
+                                <div class="strength-meter"></div>
+                                <span>Password Strength</span>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Confirm New Password</label>
+                            <input type="password" placeholder="Confirm new password">
+                        </div>
+                        
+                        <div class="form-group toggle-group">
+                            <label>Two-Factor Authentication</label>
+                            <label class="toggle-switch">
+                                <input type="checkbox">
+                                <span class="slider"></span>
+                            </label>
+                            <p class="form-hint">Add an extra layer of security to your account</p>
+                        </div>
+                        
+                        <div class="form-actions">
+                            <button type="button" class="btn btn-secondary">Cancel</button>
+                            <button type="submit" class="btn btn-primary save-btn">Update Security</button>
+                        </div>
+                    </form>
+                </section>
+                
+                <!-- Preferences Section -->
+                <section id="preferences" class="settings-section">
+                    <h2><i class="fas fa-cog"></i> Application Preferences</h2>
+                    <form class="settings-form">
+                        <div class="form-group">
+                            <label>Language</label>
+                            <select>
+                                <option>English</option>
+                                <option>Spanish</option>
+                                <option>French</option>
+                                <option>German</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Theme</label>
+                            <div class="theme-options">
+                                <label class="theme-option">
+                                    <input type="radio" name="theme" checked>
+                                    <span class="theme-light"></span>
+                                    <span>Light</span>
+                                </label>
+                                <label class="theme-option">
+                                    <input type="radio" name="theme">
+                                    <span class="theme-dark"></span>
+                                    <span>Dark</span>
+                                </label>
+                                <label class="theme-option">
+                                    <input type="radio" name="theme">
+                                    <span class="theme-system"></span>
+                                    <span>System</span>
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Dashboard Layout</label>
+                            <select>
+                                <option>Default</option>
+                                <option>Compact</option>
+                                <option>Detailed</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group toggle-group">
+                            <label>Animations</label>
+                            <label class="toggle-switch">
+                                <input type="checkbox" checked>
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+                        
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-primary save-btn">Save Preferences</button>
+                        </div>
+                    </form>
+                </section>
+                
+                <!-- Account Section -->
+                <section id="account" class="settings-section">
+                    <h2><i class="fas fa-user-cog"></i> Account Management</h2>
+                    <div class="danger-zone">
+                        <h3><i class="fas fa-exclamation-triangle"></i> Danger Zone</h3>
+                        
+                        <div class="danger-item">
+                            <div class="danger-content">
+                                <h4>Delete Account</h4>
+                                <p>Permanently delete your account and all associated data</p>
+                            </div>
+                            <button class="btn btn-danger">Delete Account</button>
+                        </div>
+                        
+                        <div class="danger-item">
+                            <div class="danger-content">
+                                <h4>Export Data</h4>
+                                <p>Download all your data in a portable format</p>
+                            </div>
+                            <button class="btn btn-secondary">Export Data</button>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <script src="setting.js"></script>
+</body>
+</html>

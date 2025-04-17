@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Energy Shield - Cybersecurity</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.css">
+    <link rel="stylesheet" href="cyber.css">
+</head>
+<body>
+    <div class="main">
+        <!-- Sidebar -->
+        <div class="sidebar_menu">
+            <div class="logo">
+                <h1><i class="fa-solid fa-shield-halved"></i><a href="#"> Energy Shield</a></h1>
+            </div>
+
+            <div class="menu">
+                <ul>
+                    <li>
+                        <i class="fa-solid fa-gauge-high"></i>
+                        <a href="dashboard.html">Dashboard</a>
+                    </li>
+                    <li class="active">
+                        <i class="fa-solid fa-shield-halved"></i>
+                        <a href="cyber.html">Cybersecurity</a>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-bug"></i>
+                        <a href="threat.html">Threat Detection</a>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-network-wired"></i>
+                        <a href="management.html">Management</a>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-chart-pie"></i>
+                        <a href="analytics.html">Analytics</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="account">
+                <div class="user-info">
+                    <div class="avatar">
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+                    <div class="details">
+                        <span class="name">Admin User</span>
+                        <span class="role">Security Analyst</span>
+                    </div>
+                </div>
+                <a href="welcome.html" class="logout-btn">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    <span>Log out</span>
+                </a>
+            </div>
+        </div>
+      
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Top Navigation -->
+            <nav class="navbar">
+                <div class="navbar-container">
+                    <div class="search-container">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input type="text" placeholder="Search threats, logs...">
+                    </div>
+                    <div class="navbar-right">
+                        <div class="notifications">
+                            <i class="fa-solid fa-bell"></i>
+                            <span class="badge">5</span>
+                        </div>
+                        <div class="quick-actions">
+                            <button class="action-btn" title="New Scan"><i class="fa-solid fa-plus"></i></button>
+                            <button class="action-btn" title="Refresh"><i class="fa-solid fa-rotate"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+            <!-- Cybersecurity Dashboard -->
+            <div class="cyber-header">
+                <h1><i class="fa-solid fa-shield-halved"></i> Cybersecurity Center</h1>
+                <p>Monitor and manage all security aspects of your energy infrastructure</p>
+            </div>
+
+            <!-- Security Status Cards -->
+            <div class="security-status">
+                <div class="status-card critical">
+                    <div class="status-icon">
+                        <i class="fa-solid fa-fire"></i>
+                    </div>
+                    <div class="status-info">
+                        <h3>Critical Threats</h3>
+                        <span class="count">8</span>
+                        <span class="description">Active high-severity threats</span>
+                    </div>
+                </div>
+                <div class="status-card warning">
+                    <div class="status-icon">
+                        <i class="fa-solid fa-triangle-exclamation"></i>
+                    </div>
+                    <div class="status-info">
+                        <h3>Vulnerabilities</h3>
+                        <span class="count">24</span>
+                        <span class="description">System vulnerabilities detected</span>
+                    </div>
+                </div>
+                <div class="status-card success">
+                    <div class="status-icon">
+                        <i class="fa-solid fa-check-shield"></i>
+                    </div>
+                    <div class="status-info">
+                        <h3>Protected Assets</h3>
+                        <span class="count">98%</span>
+                        <span class="description">Of critical infrastructure</span>
+                    </div>
+                </div>
+                <div class="status-card primary">
+                    <div class="status-icon">
+                        <i class="fa-solid fa-clock-rotate-left"></i>
+                    </div>
+                    <div class="status-info">
+                        <h3>Last Scan</h3>
+                        <span class="count">2 hours ago</span>
+                        <span class="description">Next scan in 22 minutes</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Threat Activity Section -->
+            <div class="threat-activity">
+                <div class="section-header">
+                    <h2>Threat Activity Timeline</h2>
+                    <div class="time-filter">
+                        <button class="active">24h</button>
+                        <button>7d</button>
+                        <button>30d</button>
+                        <button>Custom</button>
+                    </div>
+                </div>
+                <div class="activity-chart">
+                    <canvas id="threatTimelineChart"></canvas>
+                </div>
+            </div>
+
+            <!-- Security Events Table -->
+            <div class="security-events">
+                <div class="section-header">
+                    <h2>Recent Security Events</h2>
+                    <button class="export-btn">
+                        <i class="fa-solid fa-download"></i>
+                        <span>Export</span>
+                    </button>
+                </div>
+                <div class="events-table-container">
+                    <table class="events-table">
+                        <thead>
+                            <tr>
+                                <th>Time</th>
+                                <th>Event Type</th>
+                                <th>Severity</th>
+                                <th>Source IP</th>
+                                <th>Target</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="critical">
+                                <td>10:23:45 AM</td>
+                                <td>Unauthorized Access</td>
+                                <td><span class="severity-badge critical">Critical</span></td>
+                                <td>192.168.1.45</td>
+                                <td>Admin Portal</td>
+                                <td><span class="status-badge open">Open</span></td>
+                                <td>
+                                    <button class="table-btn investigate">Investigate</button>
+                                    <button class="table-btn mute">Mute</button>
+                                </td>
+                            </tr>
+                            <tr class="high">
+                                <td>10:15:32 AM</td>
+                                <td>Malware Detected</td>
+                                <td><span class="severity-badge high">High</span></td>
+                                <td>External</td>
+                                <td>File Server</td>
+                                <td><span class="status-badge in-progress">In Progress</span></td>
+                                <td>
+                                    <button class="table-btn investigate">Investigate</button>
+                                    <button class="table-btn mute">Mute</button>
+                                </td>
+                            </tr>
+                            <tr class="medium">
+                                <td>09:58:12 AM</td>
+                                <td>Brute Force Attempt</td>
+                                <td><span class="severity-badge medium">Medium</span></td>
+                                <td>45.227.253.109</td>
+                                <td>VPN Gateway</td>
+                                <td><span class="status-badge resolved">Resolved</span></td>
+                                <td>
+                                    <button class="table-btn investigate">Investigate</button>
+                                    <button class="table-btn mute">Mute</button>
+                                </td>
+                            </tr>
+                            <tr class="low">
+                                <td>09:42:56 AM</td>
+                                <td>Port Scan</td>
+                                <td><span class="severity-badge low">Low</span></td>
+                                <td>78.129.178.13</td>
+                                <td>Network Perimeter</td>
+                                <td><span class="status-badge open">Open</span></td>
+                                <td>
+                                    <button class="table-btn investigate">Investigate</button>
+                                    <button class="table-btn mute">Mute</button>
+                                </td>
+                            </tr>
+                            <tr class="info">
+                                <td>09:30:21 AM</td>
+                                <td>Policy Violation</td>
+                                <td><span class="severity-badge info">Info</span></td>
+                                <td>Internal</td>
+                                <td>User Workstation</td>
+                                <td><span class="status-badge resolved">Resolved</span></td>
+                                <td>
+                                    <button class="table-btn investigate">Investigate</button>
+                                    <button class="table-btn mute">Mute</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="table-footer">
+                    <span>Showing 1 to 5 of 127 entries</span>
+                    <div class="pagination">
+                        <button disabled><i class="fa-solid fa-chevron-left"></i></button>
+                        <button class="active">1</button>
+                        <button>2</button>
+                        <button>3</button>
+                        <button>...</button>
+                        <button>25</button>
+                        <button><i class="fa-solid fa-chevron-right"></i></button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Threat Map -->
+            <div class="threat-map-section">
+                <div class="section-header">
+                    <h2>Global Threat Map</h2>
+                    <button class="refresh-btn">
+                        <i class="fa-solid fa-rotate"></i>
+                        <span>Refresh</span>
+                    </button>
+                </div>
+                <div class="threat-map-container">
+                    <div class="map-legend">
+                        <div class="legend-item">
+                            <span class="legend-color critical"></span>
+                            <span>Critical Threats</span>
+                        </div>
+                        <div class="legend-item">
+                            <span class="legend-color high"></span>
+                            <span>High Threats</span>
+                        </div>
+                        <div class="legend-item">
+                            <span class="legend-color medium"></span>
+                            <span>Medium Threats</span>
+                        </div>
+                        <div class="legend-item">
+                            <span class="legend-color low"></span>
+                            <span>Low Threats</span>
+                        </div>
+                    </div>
+                    <div class="threat-map" id="threatMap">
+                        <!-- This would be replaced with an actual map visualization -->
+                        <img src="https://www.akamai.com/site/en/images/misc/visualizing-cyber-risk/cyber-attack-map.png" alt="Threat Map Visualization">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <footer class="dashboard-footer">
+                <div class="footer-content">
+                    <div class="footer-section">
+                        <h4>Energy Shield</h4>
+                        <p>Advanced protection for critical energy infrastructure</p>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Security Resources</h4>
+                        <ul>
+                            <li><a href="#">Security Policies</a></li>
+                            <li><a href="#">Incident Response</a></li>
+                            <li><a href="#">Threat Intelligence</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Connect</h4>
+                        <div class="social-icons">
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2023 Energy Shield. All rights reserved.</p>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js"></script>
+    <script src="cyber.js"></script>
+</body>
+</html>

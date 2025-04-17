@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Energy Management | Energy Shield</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="management.css">
+    <link rel="icon" href="eslogo.jpg" type="image/x-icon">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="management-nav">
+        <div class="nav-container">
+            <div class="logo-container">
+                <img src="eslogo.jpg" alt="Energy Shield Logo" class="logo">
+                <span class="logo-text">ENERGY SHIELD</span>
+            </div>
+            <div class="nav-links">
+                <a href="dashboard.html"><i class="fas fa-home"></i> Dashboard</a>
+                <a href="threat.html"><i class="fas fa-shield-alt"></i> Threat Detection</a>
+                <a href="management.html" class="active"><i class="fas fa-bolt"></i> Energy Management</a>
+                <a href="analytics.html"><i class="fas fa-chart-bar"></i> Analytics</a>
+                <a href="settings.html"><i class="fas fa-cog"></i> Settings</a>
+            </div>
+            <div class="user-menu">
+                <div class="user-avatar">
+                    <i class="fas fa-user-circle"></i>
+                </div>
+                <div class="dropdown-content">
+                    <a href="profile.html"><i class="fas fa-user"></i> Profile</a>
+                    <a href="settings.html"><i class="fas fa-cog"></i> Settings</a>
+                    <a href="welcome.html"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                </div>
+            </div>
+            <div class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="management-main">
+        <!-- Header -->
+        <header class="management-header">
+            <h1><i class="fas fa-bolt"></i> Energy Management Dashboard</h1>
+            <div class="header-controls">
+                <div class="time-filter">
+                    <button class="time-btn active">Today</button>
+                    <button class="time-btn">Week</button>
+                    <button class="time-btn">Month</button>
+                    <button class="time-btn">Custom</button>
+                </div>
+                <button class="refresh-btn"><i class="fas fa-sync-alt"></i> Refresh</button>
+            </div>
+        </header>
+
+        <!-- Stats Overview -->
+        <section class="stats-overview">
+            <div class="stat-card">
+                <div class="stat-icon">
+                    <i class="fas fa-bolt"></i>
+                </div>
+                <div class="stat-content">
+                    <h3>Energy Consumption</h3>
+                    <div class="stat-value">2,450 <span>kWh</span></div>
+                    <div class="stat-change up"><i class="fas fa-arrow-up"></i> 12% from yesterday</div>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">
+                    <i class="fas fa-solar-panel"></i>
+                </div>
+                <div class="stat-content">
+                    <h3>Renewable Energy</h3>
+                    <div class="stat-value">1,280 <span>kWh</span></div>
+                    <div class="stat-change up"><i class="fas fa-arrow-up"></i> 8% from yesterday</div>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">
+                    <i class="fas fa-money-bill-wave"></i>
+                </div>
+                <div class="stat-content">
+                    <h3>Cost Savings</h3>
+                    <div class="stat-value">$345 <span>USD</span></div>
+                    <div class="stat-change down"><i class="fas fa-arrow-down"></i> 5% from last month</div>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">
+                    <i class="fas fa-leaf"></i>
+                </div>
+                <div class="stat-content">
+                    <h3>Carbon Footprint</h3>
+                    <div class="stat-value">1.2 <span>tons</span></div>
+                    <div class="stat-change down"><i class="fas fa-arrow-down"></i> 15% from last month</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Main Visualization -->
+        <section class="main-visualization">
+            <div class="visualization-header">
+                <h2>Energy Consumption Overview</h2>
+                <div class="visualization-controls">
+                    <button class="viz-btn active"><i class="fas fa-chart-line"></i> Line</button>
+                    <button class="viz-btn"><i class="fas fa-chart-bar"></i> Bar</button>
+                    <button class="viz-btn"><i class="fas fa-chart-pie"></i> Pie</button>
+                    <button class="export-btn"><i class="fas fa-download"></i> Export</button>
+                </div>
+            </div>
+            <div class="visualization-content">
+                <img src="t1.jpg" alt="Energy Consumption Chart" class="energy-chart">
+            </div>
+        </section>
+
+        <!-- Grid Sections -->
+        <section class="grid-sections">
+            <!-- Energy Sources -->
+            <div class="grid-card">
+                <div class="card-header">
+                    <h3><i class="fas fa-battery-three-quarters"></i> Energy Sources</h3>
+                    <button class="card-menu"><i class="fas fa-ellipsis-v"></i></button>
+                </div>
+                <div class="card-content">
+                    <img src="g4.jpg" alt="Energy Sources" class="grid-image">
+                </div>
+            </div>
+            
+            <!-- Load Distribution -->
+            <div class="grid-card">
+                <div class="card-header">
+                    <h3><i class="fas fa-network-wired"></i> Load Distribution</h3>
+                    <button class="card-menu"><i class="fas fa-ellipsis-v"></i></button>
+                </div>
+                <div class="card-content">
+                    <img src="g5.jpg" alt="Load Distribution" class="grid-image">
+                </div>
+            </div>
+            
+            <!-- Peak Hours -->
+            <div class="grid-card">
+                <div class="card-header">
+                    <h3><i class="fas fa-clock"></i> Peak Hours</h3>
+                    <button class="card-menu"><i class="fas fa-ellipsis-v"></i></button>
+                </div>
+                <div class="card-content">
+                    <img src="g6.jpg" alt="Peak Hours" class="grid-image">
+                </div>
+            </div>
+            
+            <!-- Anomalies -->
+            <div class="grid-card">
+                <div class="card-header">
+                    <h3><i class="fas fa-exclamation-triangle"></i> Anomalies</h3>
+                    <button class="card-menu"><i class="fas fa-ellipsis-v"></i></button>
+                </div>
+                <div class="card-content">
+                    <img src="g7.jpg" alt="Anomalies" class="grid-image">
+                </div>
+            </div>
+            
+            <!-- Efficiency -->
+            <div class="grid-card">
+                <div class="card-header">
+                    <h3><i class="fas fa-tachometer-alt"></i> Efficiency</h3>
+                    <button class="card-menu"><i class="fas fa-ellipsis-v"></i></button>
+                </div>
+                <div class="card-content">
+                    <img src="g8.jpg" alt="Efficiency" class="grid-image">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="management.js"></script>
+</body>
+</html>

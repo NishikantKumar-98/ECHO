@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Energy Shield - Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.css">
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <div class="main">
+        <!-- Sidebar -->
+        <div class="sidebar_menu">
+            <div class="logo">
+                <h1><i class="fa-solid fa-shield-halved pulse"></i><a href="#"> Energy Shield</a></h1>
+            </div>
+
+            <div class="btn_two">
+                <label for="check">
+                    <i class="fa-solid fa-xmark"></i>
+                </label>
+            </div>
+
+            <div class="menu">
+                <ul>
+                    <li class="active">
+                        <i class="fa-solid fa-gauge-high"></i>
+                        <a href="dashboard.html">Dashboard</a>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-shield-halved"></i>
+                        <a href="cyber.html">Cybersecurity</a>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-bug"></i>
+                        <a href="threat.html">Threat Detection</a>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-network-wired"></i>
+                        <a href="management.html">Management</a>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-chart-pie"></i>
+                        <a href="analytics.html">Analytics</a>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-gear"></i>
+                        <a href="setting.html">Settings</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="account">
+                <div class="user-info">
+                    <div class="avatar">
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+                    <div class="details">
+                        <span class="name">Admin User</span>
+                        <span class="role">System Administrator</span>
+                    </div>
+                </div>
+                <a href="welcome.html" class="logout-btn">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    <span>Log out</span>
+                </a>
+            </div>
+        </div>
+      
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Top Navigation -->
+            <nav class="navbar">
+                <div class="navbar-container">
+                    <div class="search-container">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input type="text" placeholder="Search...">
+                    </div>
+                    <div class="navbar-right">
+                        <div class="notifications">
+                            <i class="fa-solid fa-bell"></i>
+                            <span class="badge">3</span>
+                        </div>
+                        <div class="quick-actions">
+                            <button class="action-btn"><i class="fa-solid fa-plus"></i></button>
+                            <button class="action-btn"><i class="fa-solid fa-rotate"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+            <!-- Dashboard Overview -->
+            <div class="dashboard-overview">
+                <h1 class="section-title">Dashboard Overview</h1>
+                <div class="stats-grid">
+                    <div class="stat-card danger">
+                        <div class="icon">
+                            <i class="fa-solid fa-triangle-exclamation"></i>
+                        </div>
+                        <div class="info">
+                            <h3>Critical Alerts</h3>
+                            <span class="value">12</span>
+                            <span class="change negative">+3 today</span>
+                        </div>
+                    </div>
+                    <div class="stat-card warning">
+                        <div class="icon">
+                            <i class="fa-solid fa-shield-halved"></i>
+                        </div>
+                        <div class="info">
+                            <h3>Threats Blocked</h3>
+                            <span class="value">1,287</span>
+                            <span class="change positive">-12% from last week</span>
+                        </div>
+                    </div>
+                    <div class="stat-card success">
+                        <div class="icon">
+                            <i class="fa-solid fa-check-double"></i>
+                        </div>
+                        <div class="info">
+                            <h3>Systems Secure</h3>
+                            <span class="value">98%</span>
+                            <span class="change positive">+2% from yesterday</span>
+                        </div>
+                    </div>
+                    <div class="stat-card primary">
+                        <div class="icon">
+                            <i class="fa-solid fa-bolt"></i>
+                        </div>
+                        <div class="info">
+                            <h3>Energy Efficiency</h3>
+                            <span class="value">87%</span>
+                            <span class="change positive">Optimal</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Charts Section -->
+            <div class="charts-section">
+                <div class="chart-container large">
+                    <h3>Threat Activity (Last 30 Days)</h3>
+                    <canvas id="threatActivityChart"></canvas>
+                </div>
+                <div class="chart-container">
+                    <h3>System Health</h3>
+                    <canvas id="systemHealthChart"></canvas>
+                </div>
+                <div class="chart-container">
+                    <h3>Energy Distribution</h3>
+                    <canvas id="energyDistributionChart"></canvas>
+                </div>
+            </div>
+
+            <!-- Recent Alerts -->
+            <div class="recent-alerts">
+                <h2 class="section-title">Recent Security Alerts</h2>
+                <div class="alerts-container">
+                    <div class="alert-card critical">
+                        <div class="alert-icon">
+                            <i class="fa-solid fa-fire"></i>
+                        </div>
+                        <div class="alert-content">
+                            <h4>Unauthorized Access Attempt</h4>
+                            <p>Multiple failed login attempts detected on admin portal</p>
+                            <span class="alert-time">10 minutes ago</span>
+                        </div>
+                        <div class="alert-actions">
+                            <button class="action-btn">Investigate</button>
+                        </div>
+                    </div>
+                    <div class="alert-card warning">
+                        <div class="alert-icon">
+                            <i class="fa-solid fa-shield-virus"></i>
+                        </div>
+                        <div class="alert-content">
+                            <h4>Malware Detected</h4>
+                            <p>Potential malware signature detected in network traffic</p>
+                            <span class="alert-time">1 hour ago</span>
+                        </div>
+                        <div class="alert-actions">
+                            <button class="action-btn">Review</button>
+                        </div>
+                    </div>
+                    <div class="alert-card info">
+                        <div class="alert-icon">
+                            <i class="fa-solid fa-plug-circle-bolt"></i>
+                        </div>
+                        <div class="alert-content">
+                            <h4>Power Fluctuation</h4>
+                            <p>Voltage spike detected in substation B-12</p>
+                            <span class="alert-time">3 hours ago</span>
+                        </div>
+                        <div class="alert-actions">
+                            <button class="action-btn">Monitor</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quick Actions -->
+            <div class="quick-actions-section">
+                <h2 class="section-title">Quick Actions</h2>
+                <div class="actions-grid">
+                    <button class="action-card">
+                        <i class="fa-solid fa-shield-virus"></i>
+                        <span>Run Security Scan</span>
+                    </button>
+                    <button class="action-card">
+                        <i class="fa-solid fa-file-shield"></i>
+                        <span>Generate Report</span>
+                    </button>
+                    <button class="action-card">
+                        <i class="fa-solid fa-user-shield"></i>
+                        <span>User Permissions</span>
+                    </button>
+                    <button class="action-card">
+                        <i class="fa-solid fa-network-wired"></i>
+                        <span>Network Map</span>
+                    </button>
+                    <button class="action-card">
+                        <i class="fa-solid fa-database"></i>
+                        <span>Backup Systems</span>
+                    </button>
+                    <button class="action-card">
+                        <i class="fa-solid fa-plug-circle-exclamation"></i>
+                        <span>Power Monitoring</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <footer class="dashboard-footer">
+                <div class="footer-content">
+                    <div class="footer-section">
+                        <h4>Energy Shield</h4>
+                        <p>Advanced protection for critical energy infrastructure</p>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li><a href="#">Documentation</a></li>
+                            <li><a href="#">API Reference</a></li>
+                            <li><a href="#">Support</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Connect</h4>
+                        <div class="social-icons">
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2023 Energy Shield. All rights reserved.</p>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js"></script>
+    <script src="dashboard.js"></script>
+</body>
+</html>

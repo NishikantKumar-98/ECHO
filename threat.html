@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Threat Detection | Energy Shield</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="threat.css">
+    <link rel="icon" href="eslogo.jpg" type="image/x-icon">
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="particles" id="particles-threat"></div>
+    
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo-container">
+                <img src="eslogo.jpg" alt="Energy Shield Logo" class="logo">
+                <span class="logo-text">ENERGY SHIELD</span>
+            </div>
+            <div class="nav-links">
+                <a href="dashboard.html" class="nav-link"><i class="fas fa-home"></i> Dashboard</a>
+                <a href="threat.html" class="nav-link active"><i class="fas fa-shield-alt"></i> Threat Detection</a>
+                <a href="analytics.html" class="nav-link"><i class="fas fa-chart-bar"></i> Analytics</a>
+                <a href="settings.html" class="nav-link"><i class="fas fa-cog"></i> Settings</a>
+            </div>
+            <div class="user-menu">
+                <div class="user-avatar">
+                    <i class="fas fa-user-circle"></i>
+                </div>
+                <div class="dropdown-content">
+                    <a href="profile.html"><i class="fas fa-user"></i> Profile</a>
+                    <a href="settings.html"><i class="fas fa-cog"></i> Settings</a>
+                    <a href="welcome.html"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                </div>
+            </div>
+            <div class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="threat-container">
+        <!-- Header -->
+        <header class="threat-header">
+            <h1><i class="fas fa-shield-alt"></i> Threat Detection Center</h1>
+            <p>Real-time monitoring and analysis of potential security threats</p>
+            <div class="status-indicator">
+                <div class="status-circle active"></div>
+                <span>System Status: <strong>Active</strong></span>
+            </div>
+        </header>
+
+        <!-- Alert Summary -->
+        <section class="alert-summary">
+            <div class="summary-card critical">
+                <h3>Critical Threats</h3>
+                <div class="count">5</div>
+                <div class="trend up"><i class="fas fa-arrow-up"></i> 2 today</div>
+            </div>
+            <div class="summary-card warning">
+                <h3>Warnings</h3>
+                <div class="count">12</div>
+                <div class="trend down"><i class="fas fa-arrow-down"></i> 3 today</div>
+            </div>
+            <div class="summary-card notice">
+                <h3>Notices</h3>
+                <div class="count">24</div>
+                <div class="trend stable"><i class="fas fa-equals"></i> No change</div>
+            </div>
+            <div class="summary-card resolved">
+                <h3>Resolved</h3>
+                <div class="count">42</div>
+                <div class="trend up"><i class="fas fa-arrow-up"></i> 8 today</div>
+            </div>
+        </section>
+
+        <!-- Threat Visualization -->
+        <section class="threat-visualization">
+            <div class="visualization-header">
+                <h2>Threat Activity Map</h2>
+                <div class="time-filter">
+                    <button class="time-btn active">24h</button>
+                    <button class="time-btn">7d</button>
+                    <button class="time-btn">30d</button>
+                    <button class="time-btn">All</button>
+                </div>
+            </div>
+            <div class="visualization-content">
+                <img src="t2.jpg" alt="Threat Activity Map" class="threat-map">
+                <div class="map-legend">
+                    <div class="legend-item"><span class="dot critical"></span> Critical Threat</div>
+                    <div class="legend-item"><span class="dot warning"></span> Warning</div>
+                    <div class="legend-item"><span class="dot notice"></span> Notice</div>
+                    <div class="legend-item"><span class="dot normal"></span> Normal Activity</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Recent Threats Table -->
+        <section class="recent-threats">
+            <div class="section-header">
+                <h2>Recent Threat Alerts</h2>
+                <button class="btn export-btn"><i class="fas fa-download"></i> Export Data</button>
+            </div>
+            <div class="threats-table-container">
+                <table class="threats-table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Type</th>
+                            <th>Severity</th>
+                            <th>Location</th>
+                            <th>First Detected</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="critical">
+                            <td>TH-2023-056</td>
+                            <td>Unauthorized Access</td>
+                            <td><span class="severity-badge critical">Critical</span></td>
+                            <td>Node 12B</td>
+                            <td>10:23 AM Today</td>
+                            <td><span class="status-badge active">Active</span></td>
+                            <td>
+                                <button class="action-btn view" title="View Details"><i class="fas fa-eye"></i></button>
+                                <button class="action-btn resolve" title="Resolve Threat"><i class="fas fa-check"></i></button>
+                            </td>
+                        </tr>
+                        <tr class="warning">
+                            <td>TH-2023-055</td>
+                            <td>Data Anomaly</td>
+                            <td><span class="severity-badge warning">Warning</span></td>
+                            <td>Grid Sector 5</td>
+                            <td>9:45 AM Today</td>
+                            <td><span class="status-badge active">Active</span></td>
+                            <td>
+                                <button class="action-btn view" title="View Details"><i class="fas fa-eye"></i></button>
+                                <button class="action-btn resolve" title="Resolve Threat"><i class="fas fa-check"></i></button>
+                            </td>
+                        </tr>
+                        <tr class="notice">
+                            <td>TH-2023-054</td>
+                            <td>Irregular Consumption</td>
+                            <td><span class="severity-badge notice">Notice</span></td>
+                            <td>Consumer 8921</td>
+                            <td>Yesterday</td>
+                            <td><span class="status-badge investigating">Investigating</span></td>
+                            <td>
+                                <button class="action-btn view" title="View Details"><i class="fas fa-eye"></i></button>
+                                <button class="action-btn resolve" title="Resolve Threat"><i class="fas fa-check"></i></button>
+                            </td>
+                        </tr>
+                        <tr class="resolved">
+                            <td>TH-2023-053</td>
+                            <td>Device Tampering</td>
+                            <td><span class="severity-badge warning">Warning</span></td>
+                            <td>Node 7C</td>
+                            <td>2 days ago</td>
+                            <td><span class="status-badge resolved">Resolved</span></td>
+                            <td>
+                                <button class="action-btn view" title="View Details"><i class="fas fa-eye"></i></button>
+                                <button class="action-btn reopen" title="Reopen Threat"><i class="fas fa-redo"></i></button>
+                            </td>
+                        </tr>
+                        <tr class="resolved">
+                            <td>TH-2023-052</td>
+                            <td>Network Intrusion</td>
+                            <td><span class="severity-badge critical">Critical</span></td>
+                            <td>Main Hub</td>
+                            <td>3 days ago</td>
+                            <td><span class="status-badge resolved">Resolved</span></td>
+                            <td>
+                                <button class="action-btn view" title="View Details"><i class="fas fa-eye"></i></button>
+                                <button class="action-btn reopen" title="Reopen Threat"><i class="fas fa-redo"></i></button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="table-footer">
+                <div class="pagination">
+                    <button class="page-btn disabled" title="Previous Page"><i class="fas fa-chevron-left"></i></button>
+                    <button class="page-btn active">1</button>
+                    <button class="page-btn">2</button>
+                    <button class="page-btn">3</button>
+                    <button class="page-btn" title="Next Page"><i class="fas fa-chevron-right"></i></button>
+                </div>
+                <div class="items-per-page">
+                    <span>Items per page:</span>
+                    <label for="items-per-page-select" class="sr-only">Items per page</label>
+                    <select id="items-per-page-select" title="Select number of items per page">
+                        <option>10</option>
+                        <option selected>25</option>
+                        <option>50</option>
+                        <option>100</option>
+                    </select>
+                </div>
+            </div>
+        </section>
+
+        <!-- Threat Analysis -->
+        <section class="threat-analysis">
+            <div class="analysis-header">
+                <h2>Threat Analysis</h2>
+                <div class="analysis-tabs">
+                    <button class="tab-btn active">Patterns</button>
+                    <button class="tab-btn">Sources</button>
+                    <button class="tab-btn">Timeline</button>
+                </div>
+            </div>
+            <div class="analysis-content">
+                <img src="t3.jpg" alt="Threat Analysis Chart" class="analysis-chart">
+                <div class="analysis-insights">
+                    <h3>Key Insights</h3>
+                    <ul>
+                        <li><i class="fas fa-exclamation-triangle"></i> 65% of threats originate from external sources</li>
+                        <li><i class="fas fa-clock"></i> Peak threat activity occurs between 2-5 PM</li>
+                        <li><i class="fas fa-network-wired"></i> Node 12B is the most vulnerable point in the network</li>
+                        <li><i class="fas fa-shield-alt"></i> Automated defenses have blocked 92% of intrusion attempts</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="threat.js"></script>
+</body>
+</html>
