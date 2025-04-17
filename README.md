@@ -53,7 +53,7 @@ The project is live and accessible through GitHub. No dependencies or installati
 
 ### Live Preview
 
-[Deployed Link](https://nishikantkumar-98.github.io/AI-driven-Energy-Shield/)
+[Deployed Link](https://nishikantkumar-98.github.io/ECHO/)
 
 ---
 
@@ -114,7 +114,6 @@ Want to contribute? Follow these steps:
 
 - **GitHub Repository**: [Energy Shield](https://github.com/Nishikantkumar-98/AI-driven-Energy-Shield)
 - **Short Video**: [View Project](https://github.com/NishikantKumar-98/AI-driven-Energy-Shield/blob/25f5f3787236cd5138aa61ed73573e615edd8c9f/Echo%20video.mp4)
-- **Hackathon Submission Portal**: [DoraHacks](https://dorahacks.io/hackathon/codeforge/detail)
 
 ---
 
